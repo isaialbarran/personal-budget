@@ -1,5 +1,6 @@
 import React from 'react';
 import './signIn.css';
+import { Link } from 'react-router-dom';
 
 export const SingIn = () => {
   return (
@@ -10,21 +11,36 @@ export const SingIn = () => {
         <label htmlFor='inputEmail' className='sr-only'>
           Email address
         </label>
-        <input type='email' id='inputEmail' className='form-control' placeholder='Email address' required autoFocus />
+        <input
+          type='email'
+          id='inputEmail'
+          className='form-control mb-2'
+          placeholder='Email address'
+          required
+          autoFocus
+        />
         <label htmlFor='inputPassword' className='sr-only'>
           Password
         </label>
         <input type='password' id='inputPassword' className='form-control' placeholder='Password' required />
-        <div className='checkbox mb-3'>
-          <label>
-            <input type='checkbox' value='remember-me' /> Remember me
-          </label>
+        <div className='m-2'>
+          <Link className='mb-4' to={'/auth/recover'} href=''>
+            {' '}
+            Recover password
+          </Link>
         </div>
         <button className='btn btn-lg btn-primary btn-block' type='submit'>
           Sign in
         </button>
-
-        <p className='mt-5 mb-3 text-muted'>&copy; 2017-2020</p>
+        <hr />
+        <div>
+          <p>Doesn't have an account?</p>
+        </div>
+        <Link to={'/auth/sign-up'} href=''>
+          {' '}
+          Sing up
+        </Link>
+        <p className='mt-5 mb-3 text-muted'>&copy; 2020</p>
       </form>
     </div>
   );
