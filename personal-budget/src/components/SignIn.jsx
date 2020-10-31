@@ -2,7 +2,7 @@ import React from 'react';
 import './signIn.css';
 import { Link } from 'react-router-dom';
 
-export const SingIn = () => {
+export const SignIn = () => {
   return (
     <div className='text-center'>
       <form className='form-signin'>
@@ -38,7 +38,7 @@ export const SingIn = () => {
         </div>
         <Link to={'/auth/sign-up'} href=''>
           {' '}
-          Sing up
+          Sign up
         </Link>
         <p className='mt-5 mb-3 text-muted'>&copy; 2020</p>
       </form>
