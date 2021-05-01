@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { SignUp } from '../components/SignUp';
-import { SignIn } from '../components/SignIn';
-import { RecoverPass } from '../components/RecoverPass';
+import { SignUp } from '../components/auth/SignUp';
+import { SignIn } from '../components/auth/SignIn';
+import { RecoverPass } from '../components/auth/RecoverPass';
 
 export const AuthRouter = () => {
   return (
