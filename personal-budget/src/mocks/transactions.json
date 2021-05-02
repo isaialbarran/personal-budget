@@ -1,0 +1,28 @@
+{
+	"transactions": [
+		{
+			"id": "1a",
+			"amount": 1200,
+			"date": "01/05/2021",
+			"title": "Vuelo",
+			"type": "outcome",
+			"description": "Vuelo a Polonia"
+		},
+		{
+			"id": "2b",
+			"amount": 10,
+			"date": "02/01/2021",
+			"title": "Pirolo",
+			"type": "outcome",
+			"description": "Restaurante chino"
+		},
+		{
+			"id": "3c",
+			"amount": 2000,
+			"date": "01/05/2021",
+			"title": "Salario",
+			"type": "income",
+			"description": "Nómina"
+		}
+	]
+}
