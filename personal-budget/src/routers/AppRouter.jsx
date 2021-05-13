@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { AuthRouter } from './AuthRouter';
-import { MainScreen } from '../components/main/MainScreen';
-import Account from '../components/main/account/Account';
-import Analisis from '../components/main/analisis/Analisis';
-import Offers from '../components/main/offers/Offers';
-import Movements from '../components/main/movements/Movements';
+import { MainScreen } from '../components/pages/MainScreen';
+import Account from '../components/pages/account/Account';
+import Analisis from '../components/pages/analisis/Analisis';
+import Offers from '../components/pages/offers/Offers';
+import Movements from '../components/pages/movements/Movements';
 
 export const AppRouter = () => {
   return (
