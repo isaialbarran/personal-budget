@@ -3,17 +3,22 @@ import { Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStepForward } from '@fortawesome/free-solid-svg-icons'
 
-import './style.css'
+import './styles.css'
 
-const TableMov = ({ movements }) => {
-  console.log("props", movements);
+const TableMov = ({ props, movements }) => {
+
+  const openTricount = (movement) => {
+    const { history, location } = props
+    return history.push(`${location.pathname}/${movement.id}`)
+  }
+
   return (
     <>
       <Table striped hover>
         {movements.map(movement =>
         (
           <tbody key={movement.id}>
-            <tr>
+            <tr onClick={() => openTricount(movement)}>
               <td>
                 <h5>{movement.title}</h5>
                 <span>{movement.subtitle}</span>

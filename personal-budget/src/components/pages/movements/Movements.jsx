@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import NavbarMov from './Navbar/NavbarMov'
-import TableMov from './TableMov/TableMov'
-import { Spinner } from 'react-bootstrap'
+import TableMov from './Table/TableMov'
+import { Container, Spinner, Button } from 'react-bootstrap'
 
 import { transaction } from '../../../mocks/transactions'
 
 import './style.css'
 
-const Movements = () => {
+const Movements = (props) => {
 
     const [movements, setMovements] = useState([])
     const [loading, setLoading] = useState(true)
 
+    const createTricount = () => {
+        const { history, match } = props
+        return history.push(`${match.path}/add`)
+    }
+
     useEffect(() => {
-        console.log("cargo");
-        console.log("movements", movements);
-        setTimeout(() => {
+        /*setTimeout(() => {
             console.log("transaction", transaction);
             console.log("loading final", loading);
-            setMovements(transaction)
-            setLoading(false)
-        }, 2000)
+        }, 2000)*/
+        setMovements(transaction)
+        setLoading(false)
     }, [])
 
-
-
     return (
-        <>
+        <Container className="position-relative">
             <NavbarMov></NavbarMov>
             {loading
                 ?
@@ -37,10 +38,11 @@ const Movements = () => {
                 </div>
                 :
                 <>
-                    <TableMov movements={movements}></TableMov>
+                    <TableMov props={props} movements={movements}></TableMov>
+                    <Button onClick={createTricount} className="circle-bottom" variant="primary">+</Button>{' '}
                 </>
             }
-        </>
+        </Container>
     )
 }
 

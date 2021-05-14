@@ -25,6 +25,25 @@ const transaction = [
 			"subtitle": "Salario",
 			"type": "income",
 			"description": "Nómina"
+		},
+		{
+			"id": "4c",
+			"amount": 2000,
+			"date": "01/05/2021",
+			"title": "Julio",
+			"subtitle": "Salario",
+			"type": "income",
+			"description": "Nómina"
+		}
+		,
+		{
+			"id": "5c",
+			"amount": 2000,
+			"date": "01/05/2021",
+			"title": "Julio",
+			"subtitle": "Salario",
+			"type": "income",
+			"description": "Nómina"
 		}
 	]
 

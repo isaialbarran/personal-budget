@@ -6,6 +6,8 @@ import Account from '../components/pages/account/Account';
 import Analisis from '../components/pages/analisis/Analisis';
 import Offers from '../components/pages/offers/Offers';
 import Movements from '../components/pages/movements/Movements';
+import TableLlistDetail from '../components/pages/movements/TableDetails/TableListDetail'
+import Form from '../components/pages/movements/Form/Form'
 
 export const AppRouter = () => {
   return (
@@ -16,6 +18,8 @@ export const AppRouter = () => {
           <Route exact path='/analisis' component={Analisis}></Route>
           <Route exact path='/services' component={Offers}></Route>
           <Route exact path='/movements' component={Movements}></Route>
+          <Route exact path='/movements/add' component={Form}></Route>
+          <Route path='/movements/' component={TableLlistDetail}></Route>
           <Route path='/auth' component={AuthRouter} />
           <Route exact path='/' component={MainScreen} />
           <Redirect to='auth/sign-in' />

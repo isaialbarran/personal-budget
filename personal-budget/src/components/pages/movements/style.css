@@ -1,5 +1,25 @@
 .box {    
- display: flex;
- align-items: center;
- justify-content: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.position-relative {
+   position: relative;
+}
+
+.circle-bottom {
+   position: relative;
+   bottom: 20px;
+   left: 20px;
+   z-index: 1030;
+   border-radius: 50%;
+}
+
+.circle-bottom-centered {
+   position: fixed;
+   bottom: 20px;
+   left: 50%;
+   z-index: 1030;
+   border-radius: 50%;
 }
